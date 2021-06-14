@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbeec1;
+  font-family: "Mate SC", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  /* flex-direction: column; */
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+}
+
+.progress-container::before {
+  content: "";
+  background-color: #c2c1c1;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.progress {
+  background-color: #3498db;
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circle {
+  background-color: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #201111;
+  transition: 0.5s ease-in-out;
+}
+
+.circle.active {
+  border-color: #3498db;
+}
+
+.btn {
+  background-color: #3498db;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: #cec190;
+  cursor: not-allowed;
+}
